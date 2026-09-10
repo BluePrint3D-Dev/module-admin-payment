@@ -1,0 +1,35 @@
+{
+  "type": "magento2-module",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "BluePrint3D Ltd",
+      "email": "support@blueprint3d.dev",
+      "homepage": "https://blueprint3d.dev"
+    }
+  ],
+  "support": {
+    "email": "support@blueprint3d.dev",
+    "docs": "https://blueprint3d.dev"
+  },
+
+  "--- MODULE SPECIFIC BELOW ---": "-------------------------",
+
+  "name": "blueprint3d/module-admin-payment",
+  "description": "Adds an 'Admin Payment' method that can only be selected when placing or editing an order from the Magento 2 admin panel, with an optional free-text transaction/receipt reference for accounting.",
+
+  "require": {
+    "php": ">=8.1.0 <8.6.0",
+    "magento/framework": "*",
+    "magento/module-payment": "*",
+    "magento/module-sales": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "BluePrint3D\\AdminPayment\\": ""
+    }
+  }
+}

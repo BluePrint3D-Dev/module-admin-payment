@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright (c) 2026 BluePrint3D Ltd. All rights reserved.
+ *
+ * This software is provided free of charge for personal or commercial use.
+ * Resale, redistribution, or sublicensing of this source code, modified or
+ * unmodified, for direct financial gain is strictly prohibited.
+ *
+ * @author    BluePrint3D Ltd <support@blueprint3d.dev>
+ * @copyright 2026 BluePrint3D Ltd (Company No. 13473806)
+ * @license   Custom Proprietary EULA (See LICENSE.txt)
+ */
+
+/** @var \BluePrint3D\AdminPayment\Block\Form\AdminPayment $block */
+?>
+<fieldset class="admin__fieldset payment-method" id="payment_form_<?= $escaper->escapeHtml($block->getMethodCode()) ?>">
+    <div class="admin__field">
+        <label for="admin_payment_reference" class="admin__field-label">
+            <span><?= $escaper->escapeHtml(__('Transaction / Receipt Reference')) ?></span>
+        </label>
+        <div class="admin__field-control">
+            <input type="text" id="admin_payment_reference" name="payment[reference]"
+                   title="<?= $escaper->escapeHtml(__('Transaction / Receipt Reference')) ?>"
+                   class="admin__control-text"
+                   value="<?= $escaper->escapeHtml($block->getReference()) ?>"/>
+        </div>
+    </div>
+</fieldset>
